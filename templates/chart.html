@@ -1,13 +1,13 @@
 <div fusioncharts
-        width="600"
-        height="400"
+        width="1000"
+        height="600"
         type={{chartType}}
         dataSource={{dataSource}} >
 </div>
 <br />
 <form name="form">
-  <select name="selector" ng-model="airName">
-        <option ng-repeat="airChoice in airList" value="{{airChoice}}">{{airChoice}}</option>
+  <select name="selector" ng-model="airName" ng-change="hasChanged()" >
+        <option ng-repeat="airChoice in airList" value="{{$index}}">{{airChoice}}</option>
       </select>
 </form>
 <br />
