@@ -1,13 +1,13 @@
-<div fusioncharts
-        width="1000"
-        height="600"
-        type={{chartType}}
-        dataSource={{dataSource}} >
+<div class="menu">
+  <a class="button b-claims" ng-class="{active:menuType=='Airport'}" href="#!/claims">Average Claims per Month</a> <a class="button b-value" ng-class="{active:menuType=='Airline'}" href="#!/value">Value Lost per Month</a></div>
+
+<div fusioncharts width="1000" height="600" type={{chartType}} dataSource={{dataSource}}>
 </div>
 <br />
 <form name="form">
-  <select name="selector" ng-model="airName" ng-change="hasChanged()" >
-        <option ng-repeat="airChoice in airList" value="{{$index}}">{{airChoice}}</option>
-      </select>
+  Select {{menuType}}:
+  <select name="selector" ng-model="airName" ng-change="hasChanged()">
+    <option ng-repeat="airChoice in airList" value="{{$index}}">{{airChoice}}</option>
+  </select>
 </form>
 <br />

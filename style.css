@@ -1,0 +1,22 @@
+body {
+	background-color:gainsboro;
+	font-family:sans-serif;
+}
+
+.button {
+	padding:1em;
+	color:white;
+	text-decoration:none;
+	display:inline-block;
+	box-sizing: border-box;
+	background-color:steelblue;
+	border-radius: 0.5em 0.5em 0 0;
+
+}
+.button:hover {
+	background-color:lightslategray!important;
+}
+
+.active {
+	background-color:firebrick;
+}
