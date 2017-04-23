@@ -163,6 +163,7 @@ for (i = 0;i<self.airlinesMonthlyData.length;i++){
 
   self.airportsMonthlyData = [];
   for (i = 0; i < self.airports.length; i++) {
+    airportStd = [[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0],[0, 0, 0, 0]]
     airportObject = {
       airport: self.airports[i],
       airportData: [{
@@ -232,50 +233,198 @@ for (i = 0;i<self.airlinesMonthlyData.length;i++){
         switch (self.data[j]['date'].substr(0, 2)) {
           case '1/':
             airportObject.airportData[0].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[0][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[0][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[0][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[0][3]++
+              }
             break;
           case '2/':
             airportObject.airportData[1].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[1][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[1][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[1][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[1][3]++
+              }
             break;
           case '3/':
             airportObject.airportData[2].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[2][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[2][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[2][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[2][3]++
+              }            
             break;
           case '4/':
             airportObject.airportData[3].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[3][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[3][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[3][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[3][3]++
+              }            
             break;
           case '5/':
             airportObject.airportData[4].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[4][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[4][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[4][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[4][3]++
+              }            
             break;
           case '6/':
             airportObject.airportData[5].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[5][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[5][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[5][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[5][3]++
+              }            
             break;
           case '7/':
             airportObject.airportData[6].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[6][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[6][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[6][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[6][3]++
+              }            
             break;
           case '8/':
             airportObject.airportData[7].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[7][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[7][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[7][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[7][3]++
+              }
             break;
           case '9/':
             airportObject.airportData[8].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[8][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[8][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[8][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[8][3]++
+              }            
             break;
           case '10':
             airportObject.airportData[9].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[9][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[9][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[9][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[9][3]++
+              }            
             break;
           case '11':
             airportObject.airportData[10].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[10][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[10][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[10][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[10][3]++
+              }            
             break;
           case '12':
             airportObject.airportData[11].value++
+              if (self.data[j]['date'].includes('/10 ')) {
+                airportStd[11][0]++
+              }
+              else if (self.data[j]['date'].includes('/11 ')) {
+                airportStd[11][1]++
+              }
+              else if (self.data[j]['date'].includes('/12 ')) {
+                airportStd[11][2]++
+              }
+              else if (self.data[j]['date'].includes('/13 ')) {
+                airportStd[11][3]++
+              }            
             break;
         }
       }
     }
     for (k=0;k<airportObject.airportData.length;k++){
       airportObject.airportData[k].value = Math.ceil(airportObject.airportData[k].value /= 4)
+      airportObject.airportData[k].tooltext = "Standard Deviation = " + math.round(math.std(airportStd[k]), 2)
     }
+
     self.airportsMonthlyData.push(airportObject)
   }
   return self;
 })
+
+console.log(Date.parse("7/15/10 9:45"))
 
 app.controller('ClaimsController', function($scope, demoDataFactory) {
   $scope.chartType = "column2d"
