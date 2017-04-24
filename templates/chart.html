@@ -1,13 +1,15 @@
 <div class="menu">
-  <a class="button b-claims" ng-class="{active:menuType=='Airport'}" href="#!/claims">Average Claims per Month</a> <a class="button b-value" ng-class="{active:menuType=='Airline'}" href="#!/value">Value Lost per Month</a></div>
-
-<div fusioncharts width="1000" height="600" type={{chartType}} dataSource={{dataSource}}>
+  <a class="button" ng-class="{active:vm.menuType=='Airport'}" href="#!/claims">Average Claims per Month</a> 
+  <a class="button" ng-class="{active:vm.menuType=='Airline'}" href="#!/value">Value Lost per Month</a>
 </div>
+
+<div fusioncharts width="1000" height="600" type="{{vm.chartType}}" dataSource="{{vm.dataSource}}"></div>
+
 <br />
 <form name="form">
-  Select {{menuType}}:
-  <select name="selector" ng-model="airName" ng-change="hasChanged()">
-    <option ng-repeat="airChoice in airList" value="{{$index}}">{{airChoice}}</option>
+  Select {{vm.menuType}}:
+  <select name="selector" ng-model="vm.airName" ng-change="vm.hasChanged()">
+    <option ng-repeat="airChoice in vm.airList" value="{{$index}}">{{airChoice}}</option>
   </select>
 </form>
 <br />

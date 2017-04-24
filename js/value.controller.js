@@ -1,24 +1,32 @@
+(function() {
+    'use strict';
+
 angular
   .module('app')
   .controller('ValueController', ValueController);
 
-function ValueController($scope, dataFactory) {
-  $scope.menuType = "Airline"
-  $scope.chartType = "line"
-  $scope.airList = dataFactory.airlines
-  $scope.airName = '0'
-  $scope.dataSource = {
+function ValueController(dataFactory) {
+  var vm = this
+  vm.menuType = "Airline"
+  vm.chartType = "line"
+  vm.airList = dataFactory.airlines
+  vm.airName = '0'
+//Data object to be used with FusionCharts
+  vm.dataSource = {
     chart: {
       caption: "Total Value Lost per Month by Airline (2010 through 2013)",
-      subCaption: dataFactory.airlines[$scope.airName],
+      subCaption: dataFactory.airlines[vm.airName],
       numberPrefix: "$"
     },
     data: dataFactory.airlinesMonthlyData[0].airlineData
   };
-  $scope.hasChanged = hasChanged;
-
+  vm.hasChanged = hasChanged;
+  
+//Function to update chart when a different object is selected from the dropdown menu
   function hasChanged() {
-    $scope.dataSource.chart.subCaption = dataFactory.airlines[$scope.airName]
-    $scope.dataSource.data = dataFactory.airlinesMonthlyData[$scope.airName].airlineData
+    vm.dataSource.chart.subCaption = dataFactory.airlines[vm.airName]
+    vm.dataSource.data = dataFactory.airlinesMonthlyData[vm.airName].airlineData
   }
 };
+
+})();
