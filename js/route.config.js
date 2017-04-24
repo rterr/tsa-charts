@@ -18,7 +18,7 @@ function config($routeProvider) {
       controllerAs: 'vm'
     })
     .otherwise({
-      redirectTo: '/'
+      redirectTo: '/claims'
     });
 };
 

@@ -15,11 +15,12 @@ function ClaimsController(dataFactory) {
   vm.dataSource = {
     chart: {
       caption: "Average Claims per Month by Airport (2010 through 2013)",
-      subCaption: dataFactory.airlines[vm.airName],
+      subCaption: dataFactory.airports[vm.airName],
     },
     data: dataFactory.airportsMonthlyData[0].airportData
   };
   vm.hasChanged = hasChanged;
+
 //Function to update chart when a different object is selected from the dropdown menu
   function hasChanged() {
     vm.dataSource.chart.subCaption = dataFactory.airports[vm.airName]
